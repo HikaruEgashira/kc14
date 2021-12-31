@@ -1,0 +1,17 @@
+{
+  "name": "Python",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "VARIANT": "3.9-bullseye"
+    }
+  },
+
+  "extensions": ["ms-python.python", "ms-python.vscode-pylance", "bungcip.better-toml"],
+
+  // "forwardPorts": [],
+
+  "postCreateCommand": "pyflow install",
+  "remoteUser": "vscode"
+}

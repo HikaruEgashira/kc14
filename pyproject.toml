@@ -1,0 +1,13 @@
+[tool.pyflow]
+name = "kc14"
+py_version = "3.9"
+version = "0.1.0"
+authors = ["Hikaru Egashira <shighten@gmail.com>"]
+
+[tool.pyflow.scripts]
+
+[tool.pyflow.dependencies]
+networkx = "^2.6.3"
+matplotlib = "^3.5.1"
+
+[tool.pyflow.dev-dependencies]

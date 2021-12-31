@@ -1,0 +1,23 @@
+{
+  // workspace
+  "terminal.integrated.defaultProfile.linux": "zsh",
+
+  // python
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.banditEnabled": true,
+  "python.formatting.provider": "black",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "python.defaultInterpreterPath": "./__pypackages__/3.9/.venv/bin/python",
+  "python.analysis.extraPaths": ["./__pypackages__/3.9/lib"],
+  "python.autoComplete.extraPaths": ["./__pypackages__/3.9/lib"],
+  "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+  "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+  "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+  "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+  "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+  "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle"
+}

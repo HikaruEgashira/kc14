@@ -9,6 +9,6 @@ RUN TEMP_DEB="$(mktemp)" && \
     dpkg -i "$TEMP_DEB" && \
     rm -f "$TEMP_DEB"
 
-# shell
-COPY /config/* /tmp/config/
+# install
+COPY /.config/* /tmp/config/
 RUN sh /tmp/config/install.sh && rm -r /tmp/config

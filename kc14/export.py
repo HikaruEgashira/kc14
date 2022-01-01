@@ -10,4 +10,7 @@ G.add_nodes_from(
     ]
 )
 
-print(G.nodes)
+print(G.nodes.data())
+
+# export
+nx.write_gexf(G, "./data/graph.gexf")

@@ -12,9 +12,9 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "python.defaultInterpreterPath": "./__pypackages__/3.9/.venv/bin/python",
-  "python.analysis.extraPaths": ["./__pypackages__/3.9/lib"],
-  "python.autoComplete.extraPaths": ["./__pypackages__/3.9/lib"],
+  "python.defaultInterpreterPath": "./.venv/bin/python",
+  "python.analysis.extraPaths": ["./.venv/lib"],
+  "python.autoComplete.extraPaths": ["./.venv/lib"],
   "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
   "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
   "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",

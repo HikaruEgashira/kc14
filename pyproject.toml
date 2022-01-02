@@ -1,15 +1,21 @@
-[tool.pyflow]
+[tool.poetry]
 name = "kc14"
-py_version = "3.9"
 version = "0.1.0"
+description = ""
 authors = ["Hikaru Egashira <shighten@gmail.com>"]
 
-[tool.pyflow.scripts]
+[tool.poetry.scripts]
 
-[tool.pyflow.dependencies]
+[tool.poetry.dependencies]
+python = "^3.9"
 networkx = "^2.6.3"
 matplotlib = "^3.5.1"
 pandas = "^1.3.5"
 pytest = "^7.0.0rc1"
+tweepy = "^4.4.0"
 
-[tool.pyflow.dev-dependencies]
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

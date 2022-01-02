@@ -37,7 +37,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions /home/$USERNAME/.zsh/
 # Copy configs
 cp -r /tmp/config/. /home/$USERNAME
 
-
 # Clean up
 apt-get autoremove -y
 apt-get clean -y

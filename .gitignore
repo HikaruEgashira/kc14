@@ -13,4 +13,3 @@ __pypackages__/
 .pytest_cache
 .mypy_cache
 data
-pyflow.lock

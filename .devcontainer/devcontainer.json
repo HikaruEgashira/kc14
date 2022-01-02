@@ -12,6 +12,6 @@
 
   // "forwardPorts": [],
 
-  "postCreateCommand": "pyflow install",
+  // "postCreateCommand": "",
   "remoteUser": "vscode"
 }

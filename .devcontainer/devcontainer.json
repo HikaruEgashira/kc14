@@ -12,6 +12,6 @@
 
   // "forwardPorts": [],
 
-  // "postCreateCommand": "",
+  "postCreateCommand": "poetry install",
   "remoteUser": "vscode"
 }

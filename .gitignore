@@ -10,3 +10,6 @@ __pypackages__/
 
 
 # Project ignores
+.pytest_cache
+.mypy_cache
+data

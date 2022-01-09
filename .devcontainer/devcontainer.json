@@ -2,13 +2,14 @@
   "name": "Python",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": "..",
-    "args": {
-      "VARIANT": "3.9-bullseye"
-    }
+    "context": ".."
   },
 
-  "extensions": ["ms-python.python", "ms-python.vscode-pylance", "bungcip.better-toml"],
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "bungcip.better-toml"
+  ],
 
   // "forwardPorts": [],
 

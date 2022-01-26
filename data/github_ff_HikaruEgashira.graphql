@@ -1,0 +1,61 @@
+{
+  user(login: "HikaruEgashira") {
+    login
+    location
+    company
+    followers(first: 50) {
+      nodes {
+        ... on User {
+          login
+          location
+          company
+          followers(first: 50) {
+            nodes {
+              ... on User {
+                login
+                location
+                company
+              }
+            }
+          }
+          following(first: 50) {
+            nodes {
+              ... on User {
+                login
+                location
+                company
+              }
+            }
+          }
+        }
+      }
+    }
+    following(first: 50) {
+      nodes {
+        ... on User {
+          login
+          location
+          company
+          followers(first: 50) {
+            nodes {
+              ... on User {
+                login
+                location
+                company
+              }
+            }
+          }
+          following(first: 50) {
+            nodes {
+              ... on User {
+                login
+                location
+                company
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  repository(owner: "substrate-developer-hub", name: "substrate-node-template") {
+    stargazers(first: 100) {
+      nodes {
+        ... on User {
+          login
+          location
+          company
+          followers(first: 10) {
+            nodes {
+              ... on User {
+                login
+                location
+                company
+              }
+            }
+          }
+          following(first: 10) {
+            nodes {
+              ... on User {
+                login
+                location
+                company
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

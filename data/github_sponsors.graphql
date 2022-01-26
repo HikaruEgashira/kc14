@@ -1,0 +1,30 @@
+{
+  user(login: "yyx990803") {
+    login
+    name
+    sponsors(first: 100) {
+      nodes {
+        ... on User {
+          login
+          name
+          sponsors(first: 100) {
+            nodes {
+              ... on User {
+                login
+                name
+                sponsors(first: 40) {
+                  nodes {
+                    ... on User {
+                      login
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

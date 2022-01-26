@@ -53,38 +53,44 @@ user1 = graph_data["data"]["user"]
 followers1 = get_followers_list(user1)
 for follower1 in followers1:
     nodes.append((get_data(follower1)))
-    nx.add_path(G, [get_username(follower1), get_username(user1)])
+    # nx.add_path(G, [get_username(follower1), get_username(user1)])
 
 followings1 = get_following_list(user1)
 for following1 in followings1:
     nodes.append((get_data(following1)))
-    nx.add_path(G, [get_username(user1), get_username(following1)])
+    # nx.add_path(G, [get_username(user1), get_username(following1)])
 
 # 2次
 for follower1 in followers1:
     followers2 = get_followers_list(follower1)
     for follower2 in followers2:
         nodes.append((get_data(follower2)))
-        nx.add_path(G, [get_username(follower2), get_username(follower1)])
+        if get_username(follower2) != get_username(user1):
+            nx.add_path(G, [get_username(follower2), get_username(follower1)])
 
     followings2 = get_following_list(follower1)
     for following2 in followings2:
         nodes.append((get_data(following2)))
-        nx.add_path(G, [get_username(following2), get_username((follower1))])
+        if get_username(following2) != get_username(user1):
+            nx.add_path(G, [get_username(following2), get_username((follower1))])
 
 for following1 in followings1:
     followers2 = get_followers_list(following1)
     for follower2 in followers2:
         nodes.append((get_data(follower2)))
-        nx.add_path(G, [get_username(follower2), get_username(following1)])
+        if get_username(follower2) != get_username(user1):
+            nx.add_path(G, [get_username(follower2), get_username(following1)])
 
     followings2 = get_following_list(following1)
     for following2 in followings2:
         nodes.append((get_data(following2)))
-        nx.add_path(G, [get_username(following2), get_username(following1)])
+        if get_username(following2) != get_username(user1):
+            nx.add_path(G, [get_username(following2), get_username(following1)])
 
 G.add_nodes_from(nodes)
 print(G.nodes.data().__len__())  # 243
 
 #%% export
 nx.write_gexf(G, "../data/" + name + ".gexf")
+
+# %%
